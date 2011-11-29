@@ -43,6 +43,10 @@ package onyx.asset.http {
 		private const bytes:ByteArray = new ByteArray();
 		private var extension:String;
 		private var tens:String = '0';
+		/**
+		 * 	@private
+		 */
+		private var _path:String;
 		
 		/**
 		 * 
@@ -53,8 +57,9 @@ package onyx.asset.http {
 			
 			// store & execute
 			this.layer		= layer,
-				this.settings	= settings,
-				this.transition	= transition;
+			this._path		= path,
+			this.settings	= settings,
+			this.transition	= transition;
 			
 			// load
 			loadContent();
@@ -239,6 +244,7 @@ package onyx.asset.http {
 			if (event is ErrorEvent) 
 			{
 				Console.output( 'HTTPContentQuery asset error: ' + (event as IOErrorEvent).text );
+				Console.output( 'HTTPContentQuery, contentHandler, IO Error loading: '  + _path );
 			}
 			else
 			{ 

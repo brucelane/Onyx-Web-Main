@@ -24,9 +24,6 @@ package {
 	import flash.utils.*;
 	
 	import onyx.asset.*;
-	/*import onyx.asset.vp.VPAsset;
-	import services.videopong.VideoPong;
-	import onyx.asset.vp.VPContentQuery;*/
 	import onyx.core.*;
 	import onyx.display.*;
 	import onyx.parameter.*;

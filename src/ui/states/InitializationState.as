@@ -17,7 +17,6 @@ package ui.states {
 
 	import flash.display.*;
 	import flash.events.*;
-	//import flash.filesystem.File;
 	import flash.media.*;
 	import flash.net.*;
 	import flash.system.LoaderContext;

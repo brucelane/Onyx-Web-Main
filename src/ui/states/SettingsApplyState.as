@@ -25,7 +25,7 @@ package ui.states {
 	
 	import ui.controls.*;
 	import ui.window.*;
-	import services.videopong.VideoPong;
+	//import services.videopong.VideoPong;
 
 	/**
 	 * 
@@ -35,7 +35,7 @@ package ui.states {
 		/**
 		 * 	VideoPong instance
 		 */
-		private const vp:VideoPong = VideoPong.getInstance();
+		//private const vp:VideoPong = VideoPong.getInstance();
 		
 		/**
 		 * 
@@ -111,7 +111,7 @@ package ui.states {
 										window.x		= windowXML.@x;
 										window.y		= windowXML.@y;
 										window.enabled	= String(windowXML.@enabled) == 'true';
-										if ( ( window.name == 'VIDEOPONG' ) && ( !vp.sessiontoken ) ) window.enabled = true ;
+										//if ( ( window.name == 'VIDEOPONG' ) && ( !vp.sessiontoken ) ) window.enabled = true ;
 										break;
 									}
 								}
@@ -161,7 +161,7 @@ package ui.states {
 		 */
 		override public function terminate():void {
 						
-			PluginManager.macros.sortOn('description')
+			PluginManager.macros.sortOn('description');
 			
 			// output
 			Console.output('\n*  MAKE ART  *\n');
